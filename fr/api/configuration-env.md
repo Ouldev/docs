@@ -1,13 +1,13 @@
 ---
 title: "API: La propriété env"
-description: Partager les variables d'environement entre client et serveur.
+description: Partager les variables d'environnement entre client et serveur.
 ---
 
 - Type: `Object`
 
-> Nuxt.js nous laisse creer des variable d'environement côté client, pouvant être partagées également côté serveur. 
+> Nuxt.js nous laisse creer des variable d'environnement côté client, pouvant être partagées également côté serveur. 
 
-La propriété env défini les variables d'environement que l'on a côté client. Elles peuvent être assignée en parametrant les variables côté serveur, celle du [module dotenv](https://github.com/nuxt-community/dotenv-module) ou similaires.
+La propriété env défini les variables d'environnement que l'on a côté client. Elles peuvent être assignée en parametrant les variables côté serveur, celle du [module dotenv](https://github.com/nuxt-community/dotenv-module) ou similaires.
 
 **Lire `process.env` et `process.env == {}` ci dessous pour une meilleure compréhension.**
 
@@ -21,7 +21,7 @@ export default {
 }
 ```
 
-Cela nous permet de créer une propriété `baseUrl` qui sera égale à la valeur de `BASE_URL`, la variable d'environement côté serveur si définie et accessible. Sinon, `baseUrl` côté client sera égale à `'http://localhost:3000'`. Par conséquent la variable côté serveur BASE_URL est copiée au côté client dans la propriété `env` par l'intermédiaire de `nuxt.config.js`.
+Cela nous permet de créer une propriété `baseUrl` qui sera égale à la valeur de `BASE_URL`, la variable d'environnement côté serveur si définie et accessible. Sinon, `baseUrl` côté client sera égale à `'http://localhost:3000'`. Par conséquent la variable côté serveur BASE_URL est copiée au côté client dans la propriété `env` par l'intermédiaire de `nuxt.config.js`.
 Autrement, la valeur sera (http://localhost:3000). 
 
 à partir de là, Nous pouvons accéder à `baseUrl` de 2 manières:
